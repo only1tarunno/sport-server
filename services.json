@@ -1,0 +1,103 @@
+[
+  {
+    "serviceImage": "https://i.ibb.co/tYzWWSN/fitness-training.jpg",
+    "serviceName": "Personalized Fitness Training",
+    "serviceDescription": "Transform your fitness journey with our personalized training programs. Our experienced trainers are dedicated to helping you achieve your fitness goals efficiently. Whether you want to lose weight, build muscle, improve endurance, or enhance your overall health, we've got you covered. Our tailored workouts are designed to meet your specific needs and preferences, ensuring you get the most out of every session. With a focus on form, technique, and progress tracking, our approach is both effective and safe. Let us guide you to a healthier, stronger, and more confident version of yourself through the power of exercise and personalized training.",
+    "serviceProviderImage": "trainer_jane.jpg",
+    "serviceProviderName": "Jane Doe",
+    "serviceProviderLocation": "Los Angeles, CA",
+    "serviceProviderShortDescription": "Certified Personal Trainer with a strong dedication to helping clients achieve their fitness and health objectives. With over a decade of experience, I believe in the transformative power of exercise and a healthy lifestyle. Let's embark on a journey to better well-being and a fitter you. Your goals are my priority.",
+    "servicePrice": "$50 per session"
+  },
+  {
+    "serviceImage": "https://i.ibb.co/DG27vMp/yoga.jpg",
+    "serviceName": "Yoga Classes for All Levels",
+    "serviceDescription": "Join our inclusive yoga classes suitable for beginners to advanced practitioners. Experience the benefits of yoga, including improved flexibility, stress reduction, and mental clarity. Our certified yoga instructors will guide you through various poses and techniques in a serene environment. Our classes are designed to help you achieve physical and mental balance while fostering a sense of well-being and inner peace. Whether you're looking to de-stress, increase flexibility, or find a mindful practice, our yoga sessions provide the perfect opportunity. Join us on the mat and embark on a journey of self-discovery and holistic wellness.",
+    "serviceProviderImage": "instructor_john.jpg",
+    "serviceProviderName": "John Smith",
+    "serviceProviderLocation": "San Francisco, CA",
+    "serviceProviderShortDescription": "Certified Yoga Instructor dedicated to spreading the practice of yoga and its holistic benefits. I'm passionate about helping individuals find peace, balance, and strength through yoga. Join my classes to embark on a journey of self-discovery and well-being.",
+    "servicePrice": "$15 per class"
+  },
+  {
+    "serviceImage": "https://i.ibb.co/qMNrt4n/tennis.jpg",
+    "serviceName": "Tennis Coaching and Lessons",
+    "serviceDescription": "Elevate your tennis game with our professional coaching and lessons. Our experienced coaches offer individual or group lessons tailored to your skill level. Improve your technique, strategy, and on-court performance. Whether you're a novice or a seasoned player, our programs are designed to help you master the sport. We focus on footwork, serve mechanics, court positioning, and match tactics. Join us to take your tennis skills to the next level and enjoy competitive games with confidence.",
+    "serviceProviderImage": "coach_michael.jpg",
+    "serviceProviderName": "Michael Turner",
+    "serviceProviderLocation": "New York, NY",
+    "serviceProviderShortDescription": "Tennis Coach with a deep love for the sport and a mission to help you unlock your tennis potential. With a background in competitive tennis, I'm committed to improving your skills and passion for the game. Let's work together to achieve your tennis dreams.",
+    "servicePrice": "$40 per hour"
+  },
+  {
+    "serviceImage": "https://i.ibb.co/dr1JrSR/running.jpg",
+    "serviceName": "Running Club Membership",
+    "serviceDescription": "Join our running club to stay fit while enjoying the camaraderie of fellow runners. Our club offers group runs, personalized coaching, and access to a variety of scenic routes and challenging trails. We welcome runners of all levels, from beginners to seasoned marathoners. Whether you're aiming for a new personal best or simply looking to improve your fitness and enjoy the thrill of running, our club provides the perfect platform for you.",
+    "serviceProviderImage": "coach_emily.jpg",
+    "serviceProviderName": "Emily Clark",
+    "serviceProviderLocation": "Chicago, IL",
+    "serviceProviderShortDescription": "Running Coach who is passionate about helping runners of all levels achieve their goals. I bring years of experience to guide you through your running journey, whether it's for fitness, fun, or competition. Let's hit the pavement and make running a joy.",
+    "servicePrice": "$25 per month"
+  },
+
+  {
+    "serviceImage": "  https://i.ibb.co/HH3dbbv/boxing.jpg",
+    "serviceName": "Boxing Training and Fitness",
+    "serviceDescription": "Unleash your potential with our boxing training. Our experienced trainers blend boxing techniques, cardiovascular workouts, and strength training to help you get in shape, improve endurance, and acquire self-defense skills. Whether you're looking to build strength, boost confidence, or simply enjoy an intense and fun workout, our boxing sessions are the perfect choice.",
+    "serviceProviderImage": "trainer_david.jpg",
+    "serviceProviderName": "David Martinez",
+    "serviceProviderLocation": "Houston, TX",
+    "serviceProviderShortDescription": "Certified Boxing Coach with a deep passion for the sweet science of boxing. I'm dedicated to helping you build confidence, strength, and boxing skills. Join our classes to experience the exhilaration of the sport and enhance your physical and mental well-being.",
+    "servicePrice": "$60 per month"
+  },
+  {
+    "serviceImage": " https://i.ibb.co/g3xJKqF/swimming.jpg",
+    "serviceName": "Swimming Lessons for All Ages",
+    "serviceDescription": "Learn to swim or refine your swimming skills with our expert instructors. We offer lessons for children and adults, from beginners to advanced swimmers. Our indoor and outdoor facilities provide a comfortable and safe environment for all. Our experienced swimming instructors focus on stroke technique, water safety, and aquatic confidence, ensuring that you become a proficient and confident swimmer.",
+    "serviceProviderImage": "instructor_sarah.jpg",
+    "serviceProviderName": "Sarah Turner",
+    "serviceProviderLocation": "Denver, CO",
+    "serviceProviderShortDescription": "Swimming Instructor dedicated to fostering water confidence and skill development. With a background in competitive swimming, I'm committed to providing a safe and nurturing environment for learners of all ages. Join my classes to embark on a journey of aquatic discovery.",
+    "servicePrice": "$30 per lesson"
+  },
+  {
+    "serviceImage": "  https://i.ibb.co/DK0h4nM/golf.jpg",
+    "serviceName": "Golf Coaching and Lessons",
+    "serviceDescription": "Master the art of golf with professional coaching and lessons. Our experienced golf instructors will help you improve your swing mechanics, putting accuracy, and overall game strategy. Whether you're new to the sport or aiming to compete at a higher level, we have the expertise to guide you towards your golfing aspirations. Our coaching covers everything from club selection to course management, ensuring that you become a confident and skilled golfer.",
+    "serviceProviderImage": "coach_james.jpg",
+    "serviceProviderName": "James Mitchell",
+    "serviceProviderLocation": "Phoenix, AZ",
+    "serviceProviderShortDescription": "Golf Instructor committed to helping you unlock your golfing potential. With a focus on swing mechanics, putting precision, and strategic play, I'll guide you to success on the greens. Join my lessons to take your golf game to the next level.",
+    "servicePrice": "$50 per hour"
+  },
+  {
+    "serviceImage": "https://i.ibb.co/F7Q1tW9/nutrition.jpg",
+    "serviceName": "Nutrition Consultation and Planning",
+    "serviceDescription": "Enhance your health and well-being with personalized nutrition consultation. Our certified nutritionists assess your dietary habits and provide expert guidance. We create a customized nutrition plan to help you achieve your wellness goals. Whether you're aiming to lose weight, gain muscle, or simply optimize your diet for better health, our comprehensive approach delivers results. We focus on meal planning, dietary analysis, and ongoing support, ensuring your journey towards improved nutrition is both effective and sustainable.",
+    "serviceProviderImage": "nutritionist_lisa.jpg",
+    "serviceProviderName": "Lisa Anderson",
+    "serviceProviderLocation": "Miami, FL",
+    "serviceProviderShortDescription": "Certified Nutritionist with a mission to empower you to make informed, healthy choices. I've successfully guided numerous clients toward achieving their desired health outcomes. Let's embark on a journey to better eating and improved well-being together.",
+    "servicePrice": "$75 per session"
+  },
+  {
+    "serviceImage": "https://i.ibb.co/VLJ63Cx/pialates.jpg",
+    "serviceName": "Pilates Classes for Core Strength",
+    "serviceDescription": "Strengthen your core, improve flexibility, and enhance your posture with our Pilates classes. Our certified Pilates instructors offer mat and equipment-based classes suitable for all fitness levels. Join our classes to achieve better balance, alignment, and overall well-being.",
+    "serviceProviderImage": "instructor_sophie.jpg",
+    "serviceProviderName": "Sophie Davis",
+    "serviceProviderLocation": "Seattle, WA",
+    "serviceProviderShortDescription": "Certified Pilates Instructor specializing in core strength and body alignment. I'm dedicated to helping you achieve a balanced and healthy body through the practice of Pilates. Join my classes to experience the transformative power of this discipline and discover the joy of movement.",
+    "servicePrice": "$20 per class"
+  },
+  {
+    "serviceImage": "https://i.ibb.co/25gWDPj/basket-Ball.jpg",
+    "serviceName": "Basketball Skills Development",
+    "serviceDescription": "Enhance your basketball skills with personalized training and coaching. Our experienced basketball coaches will work with you on dribbling, shooting, defense, and overall game strategy. Whether you're a beginner or a competitive player, we can help you reach your full potential on the court. Our training emphasizes skill development, teamwork, and game strategy, ensuring that you become a versatile and confident basketball player.",
+    "serviceProviderImage": "coach_mark.jpg",
+    "serviceProviderName": "Mark Johnson",
+    "serviceProviderLocation": "Dallas, TX",
+    "serviceProviderShortDescription": "Basketball Coach dedicated to developing your basketball skills and knowledge of the game. With a focus on technique, teamwork, and game strategy, I'm committed to helping you reach your full potential on the court. Join my sessions to elevate your basketball game and passion for the sport.",
+    "servicePrice": "$45 per session"
+  }
+]
