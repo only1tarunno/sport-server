@@ -41,9 +41,18 @@ dbConnect();
 
 const serviceCollection = client.db("clubfit").collection("serviceCollection");
 
+// show all services
 app.get("/services", async (req, res) => {
   const cursor = serviceCollection.find();
   const result = await cursor.toArray();
+  res.send(result);
+});
+
+// add a service
+app.post("/services", async (req, res) => {
+  const product = req.body;
+  console.log(req.body);
+  const result = await serviceCollection.insertOne(product);
   res.send(result);
 });
 
