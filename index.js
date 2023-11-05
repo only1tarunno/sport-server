@@ -51,9 +51,25 @@ app.get("/services", async (req, res) => {
 // add a service
 app.post("/services", async (req, res) => {
   const product = req.body;
-  console.log(req.body);
   const result = await serviceCollection.insertOne(product);
   res.send(result);
+});
+
+// serch start here
+app.post("/search", async (req, res) => {
+  const { query } = req.body;
+  if (!req.body) {
+    const results = await serviceCollection.find().toArray();
+    return res.json(results);
+  }
+  const filter = {
+    $or: [
+      { serviceName: { $regex: query, $options: "i" } }, // Case-insensitive title search
+    ],
+  };
+  const results = await serviceCollection.find(filter).toArray();
+
+  res.json(results);
 });
 
 app.get("/", (req, res) => {
