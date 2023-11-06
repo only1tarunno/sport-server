@@ -165,8 +165,6 @@ app.delete("/myservices/:id", async (req, res) => {
 
 // booking
 app.get("/bookings", verifyToken, async (req, res) => {
-  console.log(req.query.email);
-  console.log("token email", req.user.email);
   if (req.query.email !== req.user.email) {
     return res.status(403).send({ message: "forbidden" });
   }
@@ -186,6 +184,22 @@ app.post("/bookings", async (req, res) => {
   const booking = req.body;
 
   const result = await bookingCollection.insertOne(booking);
+  res.send(result);
+});
+
+// pending work api
+app.get("/pendings", verifyToken, async (req, res) => {
+  if (req.query.email !== req.user.email) {
+    return res.status(403).send({ message: "forbidden" });
+  }
+
+  let query = {};
+  if (req.query?.email) {
+    query = {
+      email: req.query.email,
+    };
+  }
+  const result = await bookingCollection.find(query).toArray();
   res.send(result);
 });
 
