@@ -29,6 +29,24 @@ const client = new MongoClient(uri, {
   },
 });
 
+// our middlewares
+const verifyToken = (req, res, next) => {
+  const token = req?.cookies?.token;
+
+  // no token
+  if (!token) {
+    return res.status(401).send({ message: "UnAuthorized" });
+  }
+  // token verify
+  jwt.verify(token, process.env.ACCESS_TOKEN, (err, decoded) => {
+    if (err) {
+      return res.status(401).send({ message: "UnAuthorized" });
+    }
+    req.user = decoded;
+    next();
+  });
+};
+
 const dbConnect = async () => {
   try {
     client.connect();
@@ -41,6 +59,29 @@ dbConnect();
 
 const serviceCollection = client.db("clubfit").collection("serviceCollection");
 
+// auth related api
+app.post("/jwt", async (req, res) => {
+  const user = req.body;
+
+  const token = jwt.sign(user, process.env.ACCESS_TOKEN, {
+    expiresIn: "1h",
+  });
+  res
+    .cookie("token", token, {
+      httpOnly: true,
+      secure: true,
+      sameSite: "none",
+    })
+    .send({ token: true });
+});
+
+app.post("/logout", async (req, res) => {
+  const user = req.body;
+
+  res.clearCookie("token", { maxAge: 0 }).send({ logout: "sucess" });
+});
+
+// service related Api
 // show all services
 app.get("/services", async (req, res) => {
   const cursor = serviceCollection.find();
