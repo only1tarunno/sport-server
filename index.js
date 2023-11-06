@@ -58,6 +58,7 @@ const dbConnect = async () => {
 dbConnect();
 
 const serviceCollection = client.db("clubfit").collection("serviceCollection");
+const bookingCollection = client.db("clubfit").collection("bookingCollection");
 
 // auth related api
 app.post("/jwt", async (req, res) => {
@@ -104,7 +105,7 @@ app.post("/services", async (req, res) => {
   res.send(result);
 });
 
-// serch start here
+// search start here
 app.post("/search", async (req, res) => {
   const { query } = req.body;
   if (!req.body) {
@@ -119,6 +120,14 @@ app.post("/search", async (req, res) => {
   const results = await serviceCollection.find(filter).toArray();
 
   res.json(results);
+});
+
+// booking related api
+app.post("/bookings", async (req, res) => {
+  const booking = req.body;
+
+  const result = await bookingCollection.insertOne(booking);
+  res.send(result);
 });
 
 app.get("/", (req, res) => {
