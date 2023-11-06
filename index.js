@@ -202,6 +202,20 @@ app.get("/pendings", verifyToken, async (req, res) => {
   const result = await bookingCollection.find(query).toArray();
   res.send(result);
 });
+// UPDATE booking
+app.patch("/bookings/:id", async (req, res) => {
+  const id = req.params.id;
+
+  const filter = { _id: new ObjectId(id) };
+  const updatedService = req.body;
+  const updateDoc = {
+    $set: {
+      workStatus: updatedService.value,
+    },
+  };
+  const result = await bookingCollection.updateOne(filter, updateDoc);
+  res.send(result);
+});
 
 app.get("/", (req, res) => {
   res.send("Server is running");
