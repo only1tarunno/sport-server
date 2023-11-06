@@ -122,7 +122,31 @@ app.post("/search", async (req, res) => {
   res.json(results);
 });
 
-// booking related api
+// my services related api
+app.get("/myservices", verifyToken, async (req, res) => {
+  if (req.query.email !== req.user.email) {
+    return res.status(403).send({ message: "forbidden" });
+  }
+
+  let query = {};
+  if (req.query?.email) {
+    query = {
+      email: req.query.email,
+    };
+  }
+  const result = await serviceCollection.find(query).toArray();
+  res.send(result);
+});
+// my service delete
+app.delete("/myservices/:id", async (req, res) => {
+  const id = req.params.id;
+
+  const query = { _id: new ObjectId(id) };
+  const result = await serviceCollection.deleteOne(query);
+  res.send(result);
+});
+
+// booking add
 app.post("/bookings", async (req, res) => {
   const booking = req.body;
 
