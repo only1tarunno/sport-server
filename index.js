@@ -163,6 +163,24 @@ app.delete("/myservices/:id", async (req, res) => {
   res.send(result);
 });
 
+// booking
+app.get("/bookings", verifyToken, async (req, res) => {
+  console.log(req.query.email);
+  console.log("token email", req.user.email);
+  if (req.query.email !== req.user.email) {
+    return res.status(403).send({ message: "forbidden" });
+  }
+
+  let query = {};
+  if (req.query?.email) {
+    query = {
+      userEmail: req.query.email,
+    };
+  }
+  const result = await bookingCollection.find(query).toArray();
+  res.send(result);
+});
+
 // booking add
 app.post("/bookings", async (req, res) => {
   const booking = req.body;
