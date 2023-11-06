@@ -137,6 +137,23 @@ app.get("/myservices", verifyToken, async (req, res) => {
   const result = await serviceCollection.find(query).toArray();
   res.send(result);
 });
+
+// UPDATE SERVICE
+app.patch("/myservices/:id", async (req, res) => {
+  const id = req.params.id;
+
+  const filter = { _id: new ObjectId(id) };
+  const updatedService = req.body;
+
+  const updateDoc = {
+    $set: {
+      ...updatedService,
+    },
+  };
+  const result = await serviceCollection.updateOne(filter, updateDoc);
+  res.send(result);
+});
+
 // my service delete
 app.delete("/myservices/:id", async (req, res) => {
   const id = req.params.id;
