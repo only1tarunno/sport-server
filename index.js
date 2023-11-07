@@ -11,7 +11,11 @@ const cors = require("cors");
 // middleware
 app.use(
   cors({
-    origin: ["http://localhost:5173"],
+    origin: [
+      "http://localhost:5173",
+      "https://fitness-and-sports-f762a.web.app",
+      "https://fitness-and-sports-f762a.firebaseapp.com",
+    ],
     credentials: true,
   })
 );
@@ -32,7 +36,6 @@ const client = new MongoClient(uri, {
 // our middlewares
 const verifyToken = (req, res, next) => {
   const token = req?.cookies?.token;
-
   // no token
   if (!token) {
     return res.status(401).send({ message: "UnAuthorized" });
@@ -91,7 +94,7 @@ app.get("/services", async (req, res) => {
 });
 
 // show a single service
-app.get("/services/:id", async (req, res) => {
+app.get("/services/:id", verifyToken, async (req, res) => {
   const id = req.params.id;
   const query = { _id: new ObjectId(id) };
   const result = await serviceCollection.findOne(query);
@@ -124,10 +127,6 @@ app.post("/search", async (req, res) => {
 
 // my services related api
 app.get("/myservices", verifyToken, async (req, res) => {
-  if (req.query.email !== req.user.email) {
-    return res.status(403).send({ message: "forbidden" });
-  }
-
   let query = {};
   if (req.query?.email) {
     query = {
@@ -202,7 +201,7 @@ app.get("/pendings", verifyToken, async (req, res) => {
   const result = await bookingCollection.find(query).toArray();
   res.send(result);
 });
-// UPDATE booking
+// UPDATE pending work status
 app.patch("/bookings/:id", async (req, res) => {
   const id = req.params.id;
 
